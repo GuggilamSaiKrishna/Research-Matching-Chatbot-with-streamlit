@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Dr. Rajesh Kumar",
+    "department": "AI & ML",
+    "research_areas": [
+      "Computer Vision",
+      "Deep Learning",
+      "Medical Imaging"
+    ],
+    "publications": [
+      "CNN for Disease Detection",
+      "Vision Transformers in Healthcare"
+    ]
+  },
+  {
+    "name": "Dr. Priya Sharma",
+    "department": "Computer Science",
+    "research_areas": [
+      "Natural Language Processing",
+      "Large Language Models",
+      "Text Mining"
+    ],
+    "publications": [
+      "Transformer Models for Text",
+      "LLM Applications"
+    ]
+  },
+  {
+    "name": "Dr. Anil Verma",
+    "department": "AI & ML",
+    "research_areas": [
+      "Reinforcement Learning",
+      "Robotics",
+      "Autonomous Systems"
+    ],
+    "publications": [
+      "RL for Robot Navigation",
+      "Autonomous Drone Control"
+    ]
+  }
+]
