@@ -1,12 +1,8 @@
-import os
-from dotenv import load_dotenv
 from google import genai
 
-load_dotenv()
+from config import get_google_api_key
 
-client = genai.Client(
-    api_key=os.getenv("GOOGLE_API_KEY")
-)
+client = genai.Client(api_key=get_google_api_key())
 
 def suggest_project(context, interest):
 

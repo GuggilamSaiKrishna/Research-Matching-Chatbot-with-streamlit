@@ -1,12 +1,11 @@
 import os
-from dotenv import load_dotenv
+
 from tavily import TavilyClient
 
-load_dotenv()
+import config  # loads .env from project root
+from config import get_tavily_api_key
 
-client = TavilyClient(
-    api_key=os.getenv("TAVILY_API_KEY")
-)
+client = TavilyClient(api_key=get_tavily_api_key())
 
 
 def web_search(query):
