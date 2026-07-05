@@ -1,36 +1,23 @@
-import os
-from dotenv import load_dotenv
-
 from google import genai
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-# ----------------------------
-# Load Environment Variables
-# ----------------------------
-load_dotenv()
+from config import CHROMA_DIR, get_google_api_key
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+api_key = get_google_api_key()
+client = genai.Client(api_key=api_key)
 
-# ----------------------------
-# Gemini Client
-# ----------------------------
-client = genai.Client(api_key=GOOGLE_API_KEY)
-
-# ----------------------------
-# Embedding Model
-# ----------------------------
 embeddings = GoogleGenerativeAIEmbeddings(
     model="gemini-embedding-001",
-    google_api_key=GOOGLE_API_KEY
+    google_api_key=api_key,
 )
 
 # ----------------------------
 # Load ChromaDB
 # ----------------------------
 db = Chroma(
-    persist_directory="chroma_db",
-    embedding_function=embeddings
+    persist_directory=CHROMA_DIR,
+    embedding_function=embeddings,
 )
 
 print("=" * 60)

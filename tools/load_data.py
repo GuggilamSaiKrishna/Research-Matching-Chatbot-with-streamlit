@@ -1,46 +1,76 @@
 import json
-from dotenv import load_dotenv
-import os
+import shutil
+import sys
+from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_chroma import Chroma
 
-# Load environment variables
-load_dotenv()
+from config import CHROMA_DIR, FACULTY_JSON, get_google_api_key
 
-# Embedding model
-embeddings = GoogleGenerativeAIEmbeddings(
-    model="gemini-embedding-001",
-    google_api_key=os.getenv("GOOGLE_API_KEY")
-)
 
-# Read faculty data
-with open("data/faculty_profiles/faculty.json", "r", encoding="utf-8") as f:
-    faculty = json.load(f)
+def _build_documents():
+    with open(FACULTY_JSON, "r", encoding="utf-8") as f:
+        faculty = json.load(f)
 
-documents = []
-
-for prof in faculty:
-    text = f"""
+    documents = []
+    for prof in faculty:
+        text = f"""
 Name: {prof['name']}
 Department: {prof['department']}
 Research Areas: {', '.join(prof['research_areas'])}
 Publications: {', '.join(prof['publications'])}
 """
-
-    documents.append(
-        Document(
-            page_content=text,
-            metadata={"name": prof["name"]}
+        documents.append(
+            Document(
+                page_content=text,
+                metadata={
+                    "name": prof["name"],
+                    "department": prof["department"],
+                    "research_areas": ", ".join(prof["research_areas"]),
+                },
+            )
         )
+    return documents
+
+
+def chroma_is_ready() -> bool:
+    if not Path(CHROMA_DIR).exists():
+        return False
+
+    embeddings = GoogleGenerativeAIEmbeddings(
+        model="gemini-embedding-001",
+        google_api_key=get_google_api_key(),
+    )
+    db = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
+    return db._collection.count() > 0
+
+
+def load_faculty_data(rebuild: bool = False) -> None:
+    if rebuild:
+        shutil.rmtree(CHROMA_DIR, ignore_errors=True)
+    elif chroma_is_ready():
+        return
+
+    embeddings = GoogleGenerativeAIEmbeddings(
+        model="gemini-embedding-001",
+        google_api_key=get_google_api_key(),
     )
 
-# Store in ChromaDB
-db = Chroma.from_documents(
-    documents=documents,
-    embedding=embeddings,
-    persist_directory="chroma_db"
-)
+    Chroma.from_documents(
+        documents=_build_documents(),
+        embedding=embeddings,
+        persist_directory=CHROMA_DIR,
+    )
 
-print("Faculty profiles loaded successfully!")
+
+def ensure_chroma_loaded() -> None:
+    load_faculty_data(rebuild=False)
+
+
+if __name__ == "__main__":
+    load_faculty_data(rebuild=True)
+    print("Faculty profiles loaded successfully!")
