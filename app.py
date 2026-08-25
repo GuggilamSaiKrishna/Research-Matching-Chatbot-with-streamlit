@@ -1,8 +1,10 @@
 from research_agents.professor_agent import professor_chat
 from research_agents.student_agent import student_chat
+from tools.load_data import ensure_chroma_loaded
 
 
 def main():
+    ensure_chroma_loaded()
     while True:
         print("\n===== Research Matching Chatbot =====")
         print("1. Student")

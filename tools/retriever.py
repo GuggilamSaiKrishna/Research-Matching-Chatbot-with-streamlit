@@ -2,19 +2,23 @@ from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
 from config import CHROMA_DIR, get_google_api_key
+from tools.load_data import ensure_chroma_loaded
 
-embeddings = GoogleGenerativeAIEmbeddings(
-    model="gemini-embedding-001",
-    google_api_key=get_google_api_key(),
-)
 
-db = Chroma(
-    persist_directory=CHROMA_DIR,
-    embedding_function=embeddings,
-)
+def get_db() -> Chroma:
+    ensure_chroma_loaded()
+    embeddings = GoogleGenerativeAIEmbeddings(
+        model="gemini-embedding-001",
+        google_api_key=get_google_api_key(),
+    )
+    return Chroma(
+        persist_directory=CHROMA_DIR,
+        embedding_function=embeddings,
+    )
 
 
 def retrieve_faculty(query, k=None):
+    db = get_db()
     total = db._collection.count()
     if total == 0:
         return []
@@ -38,3 +42,4 @@ def retrieve_faculty(query, k=None):
     matches = list(seen.values())
     matches.sort(key=lambda match: match["score"], reverse=True)
     return matches
+

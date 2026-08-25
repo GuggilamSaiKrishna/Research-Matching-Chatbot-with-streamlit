@@ -145,6 +145,12 @@ def render_sidebar():
                 "- Ask about **future research directions**"
             )
 
+        if st.button("🔄 Reload / Sync Data", use_container_width=True):
+            with st.spinner("Updating faculty database..."):
+                ensure_chroma_loaded(force=True)
+            st.success("Faculty data reloaded!")
+            st.rerun()
+
         if st.button("Clear chat", use_container_width=True):
             st.session_state.messages = []
             st.rerun()
@@ -219,10 +225,7 @@ def main():
         )
         st.stop()
 
-    if "chroma_ready" not in st.session_state:
-        with st.spinner("Loading faculty database..."):
-            ensure_chroma_loaded()
-        st.session_state.chroma_ready = True
+    ensure_chroma_loaded()
 
     if st.session_state.mode is None:
         render_role_selection()
@@ -232,3 +235,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,24 +1,13 @@
 from google import genai
-from langchain_chroma import Chroma
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-from config import CHROMA_DIR, get_google_api_key
+from config import get_google_api_key
+from tools.retriever import get_db
 
 api_key = get_google_api_key()
 client = genai.Client(api_key=api_key)
 
-embeddings = GoogleGenerativeAIEmbeddings(
-    model="gemini-embedding-001",
-    google_api_key=api_key,
-)
+db = get_db()
 
-# ----------------------------
-# Load ChromaDB
-# ----------------------------
-db = Chroma(
-    persist_directory=CHROMA_DIR,
-    embedding_function=embeddings,
-)
 
 print("=" * 60)
 print("🎓 Research Matching Chatbot")
