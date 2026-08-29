@@ -44,9 +44,9 @@ def reset_to_menu():
     st.session_state.messages = []
 
 
-def format_faculty_matches(matches) -> str:
+def format_faculty_matches(matches, top_n: int = 5) -> str:
     lines = ["### Related Faculty\n"]
-    for faculty in matches:
+    for faculty in matches[:top_n]:
         lines.append(
             f"**{faculty['name']}** — {faculty['score']}% match  \n"
             f"- Department: {faculty['department']}  \n"

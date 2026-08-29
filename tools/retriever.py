@@ -20,13 +20,14 @@ def get_db() -> Chroma:
     )
 
 
-def retrieve_faculty(query, k=None):
+def retrieve_faculty(query, k=5):
     db = get_db()
     total = db._collection.count()
     if total == 0:
         return []
 
-    results = db.similarity_search_with_score(query, k=k or total)
+    fetch_k = min(total, (k * 2) if k else total)
+    results = db.similarity_search_with_score(query, k=fetch_k or total)
 
     seen = {}
     for doc, score in results:
@@ -44,5 +45,5 @@ def retrieve_faculty(query, k=None):
 
     matches = list(seen.values())
     matches.sort(key=lambda match: match["score"], reverse=True)
-    return matches
+    return matches[:k] if k else matches
 

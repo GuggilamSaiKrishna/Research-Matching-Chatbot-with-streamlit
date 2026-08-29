@@ -2,10 +2,10 @@ from graph.student_graph import student_graph
 from tools.project_suggester import suggest_project
 
 
-def display_faculty_matches(matches):
+def display_faculty_matches(matches, top_n: int = 5):
     print("\nRelated Faculty (sorted by match)\n")
 
-    for i, faculty in enumerate(matches, start=1):
+    for i, faculty in enumerate(matches[:top_n], start=1):
         print(f"{i}. {faculty['name']} — {faculty['score']}% Match")
         print(f"   Department: {faculty['department']}")
         print(f"   Research Areas: {faculty['research_areas']}")
