@@ -44,39 +44,22 @@ Mobile Number: {mobile}
 Research Areas: {', '.join(research_areas)}
 Publications: {', '.join(publications)}"""
 
-        base_metadata = {
-            "name": name,
-            "department": department,
-            "mobile_number": str(mobile).strip(),
-            "research_areas": ", ".join(research_areas),
-            "publications": ", ".join(publications),
-            "full_profile": full_profile,
-        }
+        searchable_text = (
+            f"Research Areas: {', '.join(research_areas)}. "
+            f"Publications: {', '.join(publications)}."
+        )
 
-        # 1. Chunk per publication
-        for pub in publications:
-            documents.append(
-                Document(
-                    page_content=f"Publication: {pub}",
-                    metadata={**base_metadata, "chunk_type": "publication", "item_text": pub},
-                )
-            )
-
-        # 2. Chunk per research area
-        for area in research_areas:
-            documents.append(
-                Document(
-                    page_content=f"Research Area: {area}",
-                    metadata={**base_metadata, "chunk_type": "research_area", "item_text": area},
-                )
-            )
-
-        # 3. Combined research summary chunk (free of non-research metadata noise)
-        summary_text = f"Research Areas: {', '.join(research_areas)}. Publications: {', '.join(publications)}."
         documents.append(
             Document(
-                page_content=summary_text,
-                metadata={**base_metadata, "chunk_type": "summary", "item_text": summary_text},
+                page_content=searchable_text,
+                metadata={
+                    "name": name,
+                    "department": department,
+                    "mobile_number": str(mobile).strip(),
+                    "research_areas": ", ".join(research_areas),
+                    "publications": ", ".join(publications),
+                    "full_profile": full_profile,
+                },
             )
         )
 
@@ -118,49 +101,42 @@ def load_faculty_data(rebuild: bool = False) -> bool:
 
     documents = _build_documents()
     if documents:
-        embeddings = GoogleGenerativeAIEmbeddings(
-            model="gemini-embedding-001",
-            google_api_key=get_google_api_key(),
-        )
-        import chromadb
-        client = chromadb.PersistentClient(path=CHROMA_DIR)
         try:
-            client.delete_collection("langchain")
-        except Exception:
-            pass
+            embeddings = GoogleGenerativeAIEmbeddings(
+                model="gemini-embedding-001",
+                google_api_key=get_google_api_key(),
+            )
+            import chromadb
 
-        db = Chroma(
-            client=client,
-            collection_name="langchain",
-            embedding_function=embeddings,
-        )
+            client = chromadb.PersistentClient(path=CHROMA_DIR)
+            try:
+                client.delete_collection("langchain")
+            except Exception:
+                pass
 
-        batch_size = 20
-        for i in range(0, len(documents), batch_size):
-            batch = documents[i : i + batch_size]
-            max_retries = 5
-            for attempt in range(max_retries):
-                try:
-                    db.add_documents(batch)
-                    break
-                except Exception as e:
-                    if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                        wait_time = 25 * (attempt + 1)
-                        print(f"Rate limited. Waiting {wait_time}s before retrying batch {i // batch_size + 1}...")
-                        time.sleep(wait_time)
-                    else:
-                        raise e
-            time.sleep(1)
+            Chroma.from_documents(
+                documents=documents,
+                embedding=embeddings,
+                client=client,
+                collection_name="langchain",
+            )
+            HASH_FILE.write_text(current_hash, encoding="utf-8")
+            return True
+        except Exception as e:
+            print(f"Warning: Chroma vector DB loading failed ({e}). Fallback search will be used.")
+            return False
 
-    HASH_FILE.write_text(current_hash, encoding="utf-8")
     return True
 
 
 def ensure_chroma_loaded(force: bool = False) -> bool:
-    return load_faculty_data(rebuild=force)
+    try:
+        return load_faculty_data(rebuild=force)
+    except Exception as e:
+        print(f"Warning: ensure_chroma_loaded error: {e}")
+        return False
 
 
 if __name__ == "__main__":
     reloaded = load_faculty_data(rebuild=True)
-    print("Faculty profiles loaded successfully!")
-
+    print("Faculty profiles process completed!")
