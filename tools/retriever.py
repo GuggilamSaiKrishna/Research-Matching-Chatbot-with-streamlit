@@ -38,6 +38,7 @@ def retrieve_faculty(query, k=5):
             seen[name] = {
                 "name": name,
                 "department": doc.metadata.get("department", "N/A"),
+                "mobile_number": doc.metadata.get("mobile_number", "N/A"),
                 "research_areas": doc.metadata.get("research_areas", "N/A"),
                 "score": similarity,
                 "content": doc.page_content,

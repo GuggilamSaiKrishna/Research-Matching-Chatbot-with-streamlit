@@ -8,6 +8,8 @@ def display_faculty_matches(matches, top_n: int = 5):
     for i, faculty in enumerate(matches[:top_n], start=1):
         print(f"{i}. {faculty['name']} — {faculty['score']}% Match")
         print(f"   Department: {faculty['department']}")
+        if faculty.get("mobile_number") and faculty["mobile_number"] != "N/A":
+            print(f"   Mobile: {faculty['mobile_number']}")
         print(f"   Research Areas: {faculty['research_areas']}")
         print()
 

@@ -31,9 +31,11 @@ def _build_documents():
 
     documents = []
     for prof in faculty:
+        mobile = prof.get("mobile_number") or prof.get("mobile") or "N/A"
         text = f"""
 Name: {prof.get('name', 'Unknown')}
 Department: {prof.get('department', 'N/A')}
+Mobile Number: {mobile}
 Research Areas: {', '.join(prof.get('research_areas', []))}
 Publications: {', '.join(prof.get('publications', []))}
 """
@@ -43,6 +45,7 @@ Publications: {', '.join(prof.get('publications', []))}
                 metadata={
                     "name": prof.get("name", "Unknown").strip(),
                     "department": prof.get("department", "N/A").strip(),
+                    "mobile_number": str(mobile).strip(),
                     "research_areas": ", ".join(prof.get("research_areas", [])),
                 },
             )

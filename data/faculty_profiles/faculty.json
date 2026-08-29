@@ -2,6 +2,7 @@
   {
     "name": "Dr. Rajesh Kumar",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543201",
     "research_areas": [
       "Computer Vision",
       "Deep Learning",
@@ -15,6 +16,7 @@
   {
     "name": "Dr. Priya Sharma",
     "department": "Computer Science",
+    "mobile_number": "+91-9876543202",
     "research_areas": [
       "Natural Language Processing",
       "Large Language Models",
@@ -28,6 +30,7 @@
   {
     "name": "Dr. Anil Verma",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543203",
     "research_areas": [
       "Reinforcement Learning",
       "Robotics",
@@ -41,6 +44,7 @@
   {
     "name": "Dr. Sneha Reddy",
     "department": "Information Technology",
+    "mobile_number": "+91-9876543204",
     "research_areas": [
       "Data Science",
       "Machine Learning",
@@ -54,6 +58,7 @@
   {
     "name": "Dr. Arjun Mehta",
     "department": "Computer Science",
+    "mobile_number": "+91-9876543205",
     "research_areas": [
       "Cyber Security",
       "Network Security",
@@ -67,6 +72,7 @@
   {
     "name": "Dr. Kavya Nair",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543206",
     "research_areas": [
       "Generative AI",
       "Large Language Models",
@@ -80,6 +86,7 @@
   {
     "name": "Dr. Vikram Singh",
     "department": "Computer Science",
+    "mobile_number": "+91-9876543207",
     "research_areas": [
       "Cloud Computing",
       "Distributed Systems",
@@ -93,6 +100,7 @@
   {
     "name": "Dr. Meena Iyer",
     "department": "Electronics and Communication",
+    "mobile_number": "+91-9876543208",
     "research_areas": [
       "Internet of Things",
       "Embedded Systems",
@@ -106,6 +114,7 @@
   {
     "name": "Dr. Rohit Gupta",
     "department": "Information Technology",
+    "mobile_number": "+91-9876543209",
     "research_areas": [
       "Blockchain",
       "Distributed Ledger Technology",
@@ -119,6 +128,7 @@
   {
     "name": "Dr. Divya Menon",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543210",
     "research_areas": [
       "Data Mining",
       "Machine Learning",
@@ -132,6 +142,7 @@
   {
     "name": "Dr. Suresh Babu",
     "department": "Computer Science",
+    "mobile_number": "+91-9876543211",
     "research_areas": [
       "Software Engineering",
       "DevOps",
@@ -145,6 +156,7 @@
   {
     "name": "Dr. Neha Kapoor",
     "department": "Information Technology",
+    "mobile_number": "+91-9876543212",
     "research_areas": [
       "Natural Language Processing",
       "Sentiment Analysis",
@@ -158,6 +170,7 @@
   {
     "name": "Dr. Kiran Rao",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543213",
     "research_areas": [
       "Computer Vision",
       "Object Detection",
@@ -171,6 +184,7 @@
   {
     "name": "Dr. Aditi Joshi",
     "department": "Computer Science",
+    "mobile_number": "+91-9876543214",
     "research_areas": [
       "Artificial Intelligence",
       "Knowledge Representation",
@@ -184,6 +198,7 @@
   {
     "name": "Dr. Manish Patel",
     "department": "Electronics and Communication",
+    "mobile_number": "+91-9876543215",
     "research_areas": [
       "Robotics",
       "Autonomous Vehicles",
@@ -197,6 +212,7 @@
   {
     "name": "Dr. Lakshmi Devi",
     "department": "Information Technology",
+    "mobile_number": "+91-9876543216",
     "research_areas": [
       "Database Systems",
       "Data Engineering",
@@ -210,6 +226,7 @@
   {
     "name": "Dr. Rahul Sharma",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543217",
     "research_areas": [
       "Reinforcement Learning",
       "Deep Reinforcement Learning",
@@ -223,6 +240,7 @@
   {
     "name": "Dr. Pooja Reddy",
     "department": "Computer Science",
+    "mobile_number": "+91-9876543218",
     "research_areas": [
       "Human Computer Interaction",
       "User Experience",
@@ -236,6 +254,7 @@
   {
     "name": "Dr. Naveen Kumar",
     "department": "Information Technology",
+    "mobile_number": "+91-9876543219",
     "research_areas": [
       "Internet of Things",
       "Smart Cities",
@@ -249,6 +268,7 @@
   {
     "name": "Dr. Swathi Rao",
     "department": "AI & ML",
+    "mobile_number": "+91-9876543220",
     "research_areas": [
       "Speech Recognition",
       "Natural Language Processing",

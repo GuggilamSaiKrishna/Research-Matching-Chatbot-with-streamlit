@@ -47,9 +47,12 @@ def reset_to_menu():
 def format_faculty_matches(matches, top_n: int = 5) -> str:
     lines = ["### Related Faculty\n"]
     for faculty in matches[:top_n]:
+        mobile = faculty.get("mobile_number")
+        mobile_line = f"- Mobile: {mobile}  \n" if mobile and mobile != "N/A" else ""
         lines.append(
             f"**{faculty['name']}** — {faculty['score']}% match  \n"
             f"- Department: {faculty['department']}  \n"
+            f"{mobile_line}"
             f"- Research areas: {faculty['research_areas']}\n"
         )
     return "\n".join(lines)
