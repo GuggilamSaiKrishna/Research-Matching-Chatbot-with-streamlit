@@ -1,6 +1,6 @@
 [
   {
-    "name": "Dr. Rajesh Kumar  ",
+    "name": "Dr. Rajesh Kumar",
     "department": "AI & ML",
     "research_areas": [
       "Computer Vision",
@@ -36,6 +36,227 @@
     "publications": [
       "RL for Robot Navigation",
       "Autonomous Drone Control"
+    ]
+  },
+  {
+    "name": "Dr. Sneha Reddy",
+    "department": "Information Technology",
+    "research_areas": [
+      "Data Science",
+      "Machine Learning",
+      "Predictive Analytics"
+    ],
+    "publications": [
+      "Predictive Analytics for Business",
+      "Machine Learning Based Forecasting"
+    ]
+  },
+  {
+    "name": "Dr. Arjun Mehta",
+    "department": "Computer Science",
+    "research_areas": [
+      "Cyber Security",
+      "Network Security",
+      "Ethical Hacking"
+    ],
+    "publications": [
+      "Intrusion Detection Using ML",
+      "Secure Network Architecture"
+    ]
+  },
+  {
+    "name": "Dr. Kavya Nair",
+    "department": "AI & ML",
+    "research_areas": [
+      "Generative AI",
+      "Large Language Models",
+      "Deep Learning"
+    ],
+    "publications": [
+      "Generative AI for Education",
+      "Fine-Tuning Large Language Models"
+    ]
+  },
+  {
+    "name": "Dr. Vikram Singh",
+    "department": "Computer Science",
+    "research_areas": [
+      "Cloud Computing",
+      "Distributed Systems",
+      "Edge Computing"
+    ],
+    "publications": [
+      "Scalable Cloud Applications",
+      "Edge Computing for IoT"
+    ]
+  },
+  {
+    "name": "Dr. Meena Iyer",
+    "department": "Electronics and Communication",
+    "research_areas": [
+      "Internet of Things",
+      "Embedded Systems",
+      "Wireless Communication"
+    ],
+    "publications": [
+      "IoT Based Smart Home Systems",
+      "Wireless Sensor Networks"
+    ]
+  },
+  {
+    "name": "Dr. Rohit Gupta",
+    "department": "Information Technology",
+    "research_areas": [
+      "Blockchain",
+      "Distributed Ledger Technology",
+      "Cryptography"
+    ],
+    "publications": [
+      "Blockchain for Secure Transactions",
+      "Cryptographic Methods for Distributed Systems"
+    ]
+  },
+  {
+    "name": "Dr. Divya Menon",
+    "department": "AI & ML",
+    "research_areas": [
+      "Data Mining",
+      "Machine Learning",
+      "Big Data Analytics"
+    ],
+    "publications": [
+      "Data Mining Techniques",
+      "Big Data Driven Machine Learning"
+    ]
+  },
+  {
+    "name": "Dr. Suresh Babu",
+    "department": "Computer Science",
+    "research_areas": [
+      "Software Engineering",
+      "DevOps",
+      "Software Testing"
+    ],
+    "publications": [
+      "Automated Software Testing",
+      "DevOps Practices for Modern Applications"
+    ]
+  },
+  {
+    "name": "Dr. Neha Kapoor",
+    "department": "Information Technology",
+    "research_areas": [
+      "Natural Language Processing",
+      "Sentiment Analysis",
+      "Text Classification"
+    ],
+    "publications": [
+      "Sentiment Analysis Using Deep Learning",
+      "Text Classification with Transformers"
+    ]
+  },
+  {
+    "name": "Dr. Kiran Rao",
+    "department": "AI & ML",
+    "research_areas": [
+      "Computer Vision",
+      "Object Detection",
+      "Image Processing"
+    ],
+    "publications": [
+      "Real-Time Object Detection",
+      "Deep Learning for Image Processing"
+    ]
+  },
+  {
+    "name": "Dr. Aditi Joshi",
+    "department": "Computer Science",
+    "research_areas": [
+      "Artificial Intelligence",
+      "Knowledge Representation",
+      "Expert Systems"
+    ],
+    "publications": [
+      "Knowledge-Based AI Systems",
+      "Expert Systems for Decision Making"
+    ]
+  },
+  {
+    "name": "Dr. Manish Patel",
+    "department": "Electronics and Communication",
+    "research_areas": [
+      "Robotics",
+      "Autonomous Vehicles",
+      "Control Systems"
+    ],
+    "publications": [
+      "Autonomous Vehicle Navigation",
+      "Intelligent Control Systems"
+    ]
+  },
+  {
+    "name": "Dr. Lakshmi Devi",
+    "department": "Information Technology",
+    "research_areas": [
+      "Database Systems",
+      "Data Engineering",
+      "Data Warehousing"
+    ],
+    "publications": [
+      "Efficient Database Management",
+      "Modern Data Warehouse Architectures"
+    ]
+  },
+  {
+    "name": "Dr. Rahul Sharma",
+    "department": "AI & ML",
+    "research_areas": [
+      "Reinforcement Learning",
+      "Deep Reinforcement Learning",
+      "Game AI"
+    ],
+    "publications": [
+      "Deep RL for Intelligent Agents",
+      "Reinforcement Learning in Game Environments"
+    ]
+  },
+  {
+    "name": "Dr. Pooja Reddy",
+    "department": "Computer Science",
+    "research_areas": [
+      "Human Computer Interaction",
+      "User Experience",
+      "Artificial Intelligence"
+    ],
+    "publications": [
+      "AI-Based User Interfaces",
+      "Human-Centered AI Systems"
+    ]
+  },
+  {
+    "name": "Dr. Naveen Kumar",
+    "department": "Information Technology",
+    "research_areas": [
+      "Internet of Things",
+      "Smart Cities",
+      "Cloud Computing"
+    ],
+    "publications": [
+      "IoT Based Smart City Solutions",
+      "Cloud Platforms for IoT Applications"
+    ]
+  },
+  {
+    "name": "Dr. Swathi Rao",
+    "department": "AI & ML",
+    "research_areas": [
+      "Speech Recognition",
+      "Natural Language Processing",
+      "Deep Learning"
+    ],
+    "publications": [
+      "Deep Learning for Speech Recognition",
+      "Multilingual NLP Systems"
     ]
   }
 ]

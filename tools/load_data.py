@@ -41,8 +41,8 @@ Publications: {', '.join(prof.get('publications', []))}
             Document(
                 page_content=text.strip(),
                 metadata={
-                    "name": prof.get("name", "Unknown"),
-                    "department": prof.get("department", "N/A"),
+                    "name": prof.get("name", "Unknown").strip(),
+                    "department": prof.get("department", "N/A").strip(),
                     "research_areas": ", ".join(prof.get("research_areas", [])),
                 },
             )
@@ -67,7 +67,9 @@ def chroma_is_up_to_date() -> bool:
             model="gemini-embedding-001",
             google_api_key=get_google_api_key(),
         )
-        db = Chroma(persist_directory=CHROMA_DIR, embedding_function=embeddings)
+        import chromadb
+        client = chromadb.PersistentClient(path=CHROMA_DIR)
+        db = Chroma(client=client, collection_name="langchain", embedding_function=embeddings)
         return db._collection.count() > 0
     except Exception:
         return False
@@ -79,12 +81,6 @@ def load_faculty_data(rebuild: bool = False) -> bool:
     if not rebuild and chroma_is_up_to_date():
         return False
 
-    if Path(CHROMA_DIR).exists():
-        try:
-            shutil.rmtree(CHROMA_DIR, ignore_errors=True)
-        except Exception:
-            pass
-
     Path(CHROMA_DIR).mkdir(parents=True, exist_ok=True)
 
     documents = _build_documents()
@@ -93,10 +89,18 @@ def load_faculty_data(rebuild: bool = False) -> bool:
             model="gemini-embedding-001",
             google_api_key=get_google_api_key(),
         )
+        import chromadb
+        client = chromadb.PersistentClient(path=CHROMA_DIR)
+        try:
+            client.delete_collection("langchain")
+        except Exception:
+            pass
+
         Chroma.from_documents(
             documents=documents,
             embedding=embeddings,
-            persist_directory=CHROMA_DIR,
+            client=client,
+            collection_name="langchain",
         )
 
     HASH_FILE.write_text(current_hash, encoding="utf-8")

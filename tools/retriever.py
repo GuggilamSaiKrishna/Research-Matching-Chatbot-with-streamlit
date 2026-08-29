@@ -1,3 +1,4 @@
+import chromadb
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
@@ -11,8 +12,10 @@ def get_db() -> Chroma:
         model="gemini-embedding-001",
         google_api_key=get_google_api_key(),
     )
+    client = chromadb.PersistentClient(path=CHROMA_DIR)
     return Chroma(
-        persist_directory=CHROMA_DIR,
+        client=client,
+        collection_name="langchain",
         embedding_function=embeddings,
     )
 
