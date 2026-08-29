@@ -2,6 +2,7 @@ import hashlib
 import json
 import shutil
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -31,25 +32,54 @@ def _build_documents():
 
     documents = []
     for prof in faculty:
+        name = prof.get("name", "Unknown").strip()
+        department = prof.get("department", "N/A").strip()
         mobile = prof.get("mobile_number") or prof.get("mobile") or "N/A"
-        text = f"""
-Name: {prof.get('name', 'Unknown')}
-Department: {prof.get('department', 'N/A')}
+        research_areas = prof.get("research_areas", [])
+        publications = prof.get("publications", [])
+
+        full_profile = f"""Name: {name}
+Department: {department}
 Mobile Number: {mobile}
-Research Areas: {', '.join(prof.get('research_areas', []))}
-Publications: {', '.join(prof.get('publications', []))}
-"""
+Research Areas: {', '.join(research_areas)}
+Publications: {', '.join(publications)}"""
+
+        base_metadata = {
+            "name": name,
+            "department": department,
+            "mobile_number": str(mobile).strip(),
+            "research_areas": ", ".join(research_areas),
+            "publications": ", ".join(publications),
+            "full_profile": full_profile,
+        }
+
+        # 1. Chunk per publication
+        for pub in publications:
+            documents.append(
+                Document(
+                    page_content=f"Publication: {pub}",
+                    metadata={**base_metadata, "chunk_type": "publication", "item_text": pub},
+                )
+            )
+
+        # 2. Chunk per research area
+        for area in research_areas:
+            documents.append(
+                Document(
+                    page_content=f"Research Area: {area}",
+                    metadata={**base_metadata, "chunk_type": "research_area", "item_text": area},
+                )
+            )
+
+        # 3. Combined research summary chunk (free of non-research metadata noise)
+        summary_text = f"Research Areas: {', '.join(research_areas)}. Publications: {', '.join(publications)}."
         documents.append(
             Document(
-                page_content=text.strip(),
-                metadata={
-                    "name": prof.get("name", "Unknown").strip(),
-                    "department": prof.get("department", "N/A").strip(),
-                    "mobile_number": str(mobile).strip(),
-                    "research_areas": ", ".join(prof.get("research_areas", [])),
-                },
+                page_content=summary_text,
+                metadata={**base_metadata, "chunk_type": "summary", "item_text": summary_text},
             )
         )
+
     return documents
 
 
@@ -99,12 +129,28 @@ def load_faculty_data(rebuild: bool = False) -> bool:
         except Exception:
             pass
 
-        Chroma.from_documents(
-            documents=documents,
-            embedding=embeddings,
+        db = Chroma(
             client=client,
             collection_name="langchain",
+            embedding_function=embeddings,
         )
+
+        batch_size = 20
+        for i in range(0, len(documents), batch_size):
+            batch = documents[i : i + batch_size]
+            max_retries = 5
+            for attempt in range(max_retries):
+                try:
+                    db.add_documents(batch)
+                    break
+                except Exception as e:
+                    if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                        wait_time = 25 * (attempt + 1)
+                        print(f"Rate limited. Waiting {wait_time}s before retrying batch {i // batch_size + 1}...")
+                        time.sleep(wait_time)
+                    else:
+                        raise e
+            time.sleep(1)
 
     HASH_FILE.write_text(current_hash, encoding="utf-8")
     return True
