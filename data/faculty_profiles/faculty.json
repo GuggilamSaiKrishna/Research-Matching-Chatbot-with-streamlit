@@ -1,282 +1,473 @@
 [
   {
-    "name": "Dr. Rajesh Kumar",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543201",
+    "name": "Dr. Venkatesulu Dondeti",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Computer Vision",
-      "Deep Learning",
-      "Medical Imaging"
-    ],
-    "publications": [
-      "CNN for Disease Detection",
-      "Vision Transformers in Healthcare"
-    ]
-  },
-  {
-    "name": "Dr. Priya Sharma",
-    "department": "Computer Science",
-    "mobile_number": "+91-9876543202",
-    "research_areas": [
-      "Natural Language Processing",
-      "Large Language Models",
-      "Text Mining"
-    ],
-    "publications": [
-      "Transformer Models for Text",
-      "LLM Applications"
-    ]
-  },
-  {
-    "name": "Dr. Anil Verma",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543203",
-    "research_areas": [
-      "Reinforcement Learning",
-      "Robotics",
-      "Autonomous Systems"
-    ],
-    "publications": [
-      "RL for Robot Navigation",
-      "Autonomous Drone Control"
-    ]
-  },
-  {
-    "name": "Dr. Sneha Reddy",
-    "department": "Information Technology",
-    "mobile_number": "+91-9876543204",
-    "research_areas": [
-      "Data Science",
+      "Distributed Systems",
+      "Wireless Sensor Networks",
+      "Privacy and Security",
       "Machine Learning",
-      "Predictive Analytics"
-    ],
-    "publications": [
-      "Predictive Analytics for Business",
-      "Machine Learning Based Forecasting"
-    ]
-  },
-  {
-    "name": "Dr. Arjun Mehta",
-    "department": "Computer Science",
-    "mobile_number": "+91-9876543205",
-    "research_areas": [
-      "Cyber Security",
-      "Network Security",
-      "Ethical Hacking"
-    ],
-    "publications": [
-      "Intrusion Detection Using ML",
-      "Secure Network Architecture"
-    ]
-  },
-  {
-    "name": "Dr. Kavya Nair",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543206",
-    "research_areas": [
-      "Generative AI",
-      "Large Language Models",
       "Deep Learning"
     ],
-    "publications": [
-      "Generative AI for Education",
-      "Fine-Tuning Large Language Models"
-    ]
+    "publications": []
   },
   {
-    "name": "Dr. Vikram Singh",
-    "department": "Computer Science",
-    "mobile_number": "+91-9876543207",
-    "research_areas": [
-      "Cloud Computing",
-      "Distributed Systems",
-      "Edge Computing"
-    ],
-    "publications": [
-      "Scalable Cloud Applications",
-      "Edge Computing for IoT"
-    ]
+    "name": "Ms. Kondapalli Krupa Sagari",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
   },
   {
-    "name": "Dr. Meena Iyer",
-    "department": "Electronics and Communication",
-    "mobile_number": "+91-9876543208",
+    "name": "Dr. Nirupama Bhat Mundukur",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Internet of Things",
-      "Embedded Systems",
-      "Wireless Communication"
-    ],
-    "publications": [
-      "IoT Based Smart Home Systems",
-      "Wireless Sensor Networks"
-    ]
-  },
-  {
-    "name": "Dr. Rohit Gupta",
-    "department": "Information Technology",
-    "mobile_number": "+91-9876543209",
-    "research_areas": [
-      "Blockchain",
-      "Distributed Ledger Technology",
-      "Cryptography"
-    ],
-    "publications": [
-      "Blockchain for Secure Transactions",
-      "Cryptographic Methods for Distributed Systems"
-    ]
-  },
-  {
-    "name": "Dr. Divya Menon",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543210",
-    "research_areas": [
-      "Data Mining",
-      "Machine Learning",
-      "Big Data Analytics"
-    ],
-    "publications": [
-      "Data Mining Techniques",
-      "Big Data Driven Machine Learning"
-    ]
-  },
-  {
-    "name": "Dr. Suresh Babu",
-    "department": "Computer Science",
-    "mobile_number": "+91-9876543211",
-    "research_areas": [
-      "Software Engineering",
-      "DevOps",
-      "Software Testing"
-    ],
-    "publications": [
-      "Automated Software Testing",
-      "DevOps Practices for Modern Applications"
-    ]
-  },
-  {
-    "name": "Dr. Neha Kapoor",
-    "department": "Information Technology",
-    "mobile_number": "+91-9876543212",
-    "research_areas": [
-      "Natural Language Processing",
-      "Sentiment Analysis",
-      "Text Classification"
-    ],
-    "publications": [
-      "Sentiment Analysis Using Deep Learning",
-      "Text Classification with Transformers"
-    ]
-  },
-  {
-    "name": "Dr. Kiran Rao",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543213",
-    "research_areas": [
-      "Computer Vision",
-      "Object Detection",
+      "Information Security",
       "Image Processing"
     ],
     "publications": [
-      "Real-Time Object Detection",
-      "Deep Learning for Image Processing"
+      "Cheating identifiable polynomial based secret sharing scheme for audio and image",
+      "Feature importance feedback with Deep Q process in ensemble-based metaheuristic feature selection algorithms",
+      "Energy Attentive Pre-fault Detection Mechanism with Multilevel Transmission for Distributed Wireless Sensor Network"
     ]
   },
   {
-    "name": "Dr. Aditi Joshi",
-    "department": "Computer Science",
-    "mobile_number": "+91-9876543214",
+    "name": "Dr. Sreekantha Reddy",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
+  },
+  {
+    "name": "Mr. Srinivasarao Pallanti",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
+  },
+  {
+    "name": "Dr. Jyostna Devi Bodapati",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Associate Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Computer Vision",
+      "Representation Learning with Deep Attention",
+      "Natural Language Processing"
+    ],
+    "publications": [
+      "An Efficient Approach for Semantic Segmentation of Salt Domes in Seismic Images Using Improved UNET Architecture",
+      "FERNet: A Deep CNN Architecture for Facial Expression Recognition in the Wild",
+      "Feature Extraction and Classification Using Deep Convolutional Neural Networks",
+      "Composite Deep Neural Network with Gated-Attention Mechanism for Diabetic Retinopathy Severity Classification",
+      "Deep Convolution Feature Aggregation: An Application to Diabetic Retinopathy Severity Level Prediction",
+      "Abnormal Network Traffic Detection Using Support Vector Data Description",
+      "Joint Training of Two-Channel Deep Neural Network for Brain Tumor Classification",
+      "Msenet: Multi-Modal Squeeze-and-Excitation Network for Brain Tumor Severity Prediction",
+      "Facial Emotion Recognition Using Deep CNN Based Features",
+      "Robust Cluster-Then-Label (RCTL) Approach for Heart Disease Prediction",
+      "Sentiment Analysis from Movie Reviews Using LSTMs",
+      "Performance of Different Classifiers in Non-Linear Subspace",
+      "Projection of Data in a Non-Linear Subspace",
+      "Hybrid Dimensional Reduction Techniques"
+    ]
+  },
+  {
+    "name": "Dr. Jawad Ahmad Dar",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Associate Professor",
+    "mobile_number": "",
     "research_areas": [
       "Artificial Intelligence",
-      "Knowledge Representation",
-      "Expert Systems"
+      "Machine Learning",
+      "Deep Learning",
+      "Image Processing",
+      "Reinforcement Learning"
     ],
-    "publications": [
-      "Knowledge-Based AI Systems",
-      "Expert Systems for Decision Making"
-    ]
+    "publications": []
   },
   {
-    "name": "Dr. Manish Patel",
-    "department": "Electronics and Communication",
-    "mobile_number": "+91-9876543215",
+    "name": "Dr. D.S. Bhupal Naik",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Associate Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Robotics",
-      "Autonomous Vehicles",
-      "Control Systems"
+      "Federated Learning",
+      "VANETs",
+      "Security"
     ],
-    "publications": [
-      "Autonomous Vehicle Navigation",
-      "Intelligent Control Systems"
-    ]
+    "publications": []
   },
   {
-    "name": "Dr. Lakshmi Devi",
-    "department": "Information Technology",
-    "mobile_number": "+91-9876543216",
+    "name": "Dr. Eva Patel",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Associate Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Database Systems",
-      "Data Engineering",
-      "Data Warehousing"
+      "Cloud Computing",
+      "Cloud Workload Prediction",
+      "Machine Learning",
+      "Deep Learning"
     ],
-    "publications": [
-      "Efficient Database Management",
-      "Modern Data Warehouse Architectures"
-    ]
+    "publications": []
   },
   {
-    "name": "Dr. Rahul Sharma",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543217",
+    "name": "Dr. Sivadi Balakrishna",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Associate Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Reinforcement Learning",
-      "Deep Reinforcement Learning",
-      "Game AI"
+      "Data Analytics",
+      "Computer Vision",
+      "Machine Learning",
+      "Recommendation Systems"
     ],
     "publications": [
-      "Deep RL for Intelligent Agents",
-      "Reinforcement Learning in Game Environments"
+      "A Two-Stage Deep Learning Approach for Optimizing Fashion Product Recommendations",
+      "A Novel Smart AI System for Automated Lung Nodule Detection in CT Scan Images"
     ]
   },
   {
-    "name": "Dr. Pooja Reddy",
-    "department": "Computer Science",
-    "mobile_number": "+91-9876543218",
+    "name": "Dr. Amar Jukuntla",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Human Computer Interaction",
-      "User Experience",
-      "Artificial Intelligence"
+      "Wireless Sensor Network",
+      "Multi Agent System"
     ],
-    "publications": [
-      "AI-Based User Interfaces",
-      "Human-Centered AI Systems"
-    ]
+    "publications": []
   },
   {
-    "name": "Dr. Naveen Kumar",
-    "department": "Information Technology",
-    "mobile_number": "+91-9876543219",
+    "name": "Dr. A.V. Nageswara Rao",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
     "research_areas": [
       "Internet of Things",
-      "Smart Cities",
+      "Machine Learning",
+      "Medical Image Analysis"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Ajoy Kumar Nandy",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Conjugate Heat Transfer Analysis",
+      "Single and Multi-phase Flow",
+      "Hypersonic Aircraft",
+      "Thermal Management of Electronics",
+      "Liquid Cooling in Microchannels",
+      "Flow Boiling in Microchannels",
+      "Solar Hybrid",
+      "EV Battery Thermal Management"
+    ],
+    "publications": [
+      "Solid/porous compound wavy fins bifurcation at crest and trough in the microchannel heat sink: thermo-hydraulic performance"
+    ]
+  },
+  {
+    "name": "Dr. Arnab De",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Microstrip Antennas",
+      "Microwave Theory",
+      "5G Communication",
+      "Digital Image Processing",
+      "Computer Vision"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Avvaru Subramanyam",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "IoT and Embedded Systems",
+      "VLSI",
+      "Machine Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. B. Sudharani",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "VLSI",
+      "Machine Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. P.M. Benson Mansingh",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Networks",
+      "IoT",
       "Cloud Computing"
     ],
     "publications": [
-      "IoT Based Smart City Solutions",
-      "Cloud Platforms for IoT Applications"
+      "Federated Learning Enabled Wireless Sensor Architecture for Secure and Intelligent Brain Surgery Monitoring"
     ]
   },
   {
-    "name": "Dr. Swathi Rao",
-    "department": "AI & ML",
-    "mobile_number": "+91-9876543220",
+    "name": "Mr. Bhukya Akash",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
+  },
+  {
+    "name": "Dr. Britto Manoj A",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
     "research_areas": [
-      "Speech Recognition",
+      "Mathematical Modeling"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Mr. Brundavanam Satyasai",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Deep Learning",
+      "Signal Processing",
+      "Image Processing"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Ch Amarendra",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Optimization Techniques",
+      "Machine Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Ms. Gunakala Archana",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Machine Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Gurusamy Murugesan",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
+  },
+  {
+    "name": "Mrs. Koduru Vyshnavi",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Image Processing",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Mr. N.B. Prakash Tiruveedula",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Metal Matrix Composites",
+      "Strengthening Mechanisms",
+      "3D Printing"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Mr. Narasimharao Vallabhu",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
+  },
+  {
+    "name": "Mr. P.L.N. Manoj Kumar",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Data Science"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Mrs. Palaparthi Seethalakshmi",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Machine Learning",
       "Natural Language Processing",
       "Deep Learning"
     ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Ramesh Kumar Mojjada",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Machine Learning",
+      "Deep Learning",
+      "Generative AI"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Rose Rani Chavvakula",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Data Science",
+      "Data Mining"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Mrs. S. Krishnaveni",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [],
+    "publications": []
+  },
+  {
+    "name": "Dr. Sajja Radharani",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Deep Learning",
+      "Machine Learning"
+    ],
     "publications": [
-      "Deep Learning for Speech Recognition",
-      "Multilingual NLP Systems"
+      "HEViT: A Hybrid Efficient Vision Transformer for Student Attentiveness Detection in Classroom Environments"
     ]
+  },
+  {
+    "name": "Dr. Sanjay Kumar Gupta",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Interface Phenomena",
+      "Micro and Nanoscale Heat Transfer",
+      "Thermal Management"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Sateesh Kumar Reddy",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Biomedical Signal Processing",
+      "Biomedical Image Processing",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Shaik Mastan Sharif",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Adaptive Signal Processing",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Mr. Shaik Mahabub Basha",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Subham Kumar Sahoo",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Cloud Computing",
+      "Edge Computing",
+      "Internet of Things"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Syed Reshma",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "publications": []
+  },
+  {
+    "name": "Dr. Thulasya Naik B",
+    "department": "Advanced Computer Science and Engineering",
+    "designation": "Assistant Professor",
+    "mobile_number": "",
+    "research_areas": [
+      "Image and Video Processing",
+      "Down Scaling",
+      "Machine Learning",
+      "Deep Learning Architectures",
+      "Embedded Systems",
+      "Pattern Recognition"
+    ],
+    "publications": []
   }
 ]
